@@ -1,5 +1,5 @@
 # text-hodgepodge
-Text manipulation scripts, OCR, and so no...
+Text manipulation scripts, OCR, and so on...
 
 Required tools:
 * [OCRmyPDF](https://ocrmypdf.readthedocs.io/en/latest/): add text to PDF
