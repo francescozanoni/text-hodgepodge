@@ -1,14 +1,15 @@
-# Basic Tesseract usage:
-#  - tesseract .\3.jpg 3_da_tesseract -l ITA
+# Basic pdftotext usage:
+#  - pdftotext .\file.pdf -f 1 -l 1 -raw .\output.txt
 
+# Text extraction.
+pdftotext file.pdf -f $( $i - 2 ) -l $( $i - 2 ) -raw output.txt
 
-tesseract file.jpg output_base_name -l ITA
-if ((Get-Content output_base_name.txt).Length -gt 0)
+# Text post-processing.
+if ((Get-Content output.txt).Length -gt 0)
 {
-    ((Get-Content output_base_name.txt -Raw) -replace 'ﬁ', 'fi' `
-                                -replace ' »', '»' `
-                                -replace '« ', '«').Trim() | Set-Content output_base_name.txt
-    ((Get-Content output_base_name.txt) -join "`n") | Set-Content -NoNewLine output_base_name.txt
+    ((Get-Content output.txt -Raw) -replace 'ﬁ', 'fi' `
+                                -replace ' dell ', " dell'").Trim() | Set-Content output.txt
+    ((Get-Content output.txt) -join "`n") | Set-Content -NoNewLine output.txt
 }
 
 
