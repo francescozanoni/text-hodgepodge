@@ -1,5 +1,5 @@
 # Basic Tesseract usage:
-#  - tesseract .\3.jpg 3_da_tesseract -l ITA
+#  - tesseract .\3.jpg 3_text_from_tesseract -l ITA
 
 # Text extraction.
 tesseract file.jpg output_base_name -l ITA

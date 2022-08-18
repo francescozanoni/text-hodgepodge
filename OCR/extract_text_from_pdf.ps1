@@ -1,8 +1,8 @@
 # Basic pdftotext usage:
-#  - pdftotext .\file.pdf -f 1 -l 1 -raw .\output.txt
+#  - pdftotext .\file.pdf -f <first page> -l <last page> -raw .\output.txt
 
 # Text extraction.
-pdftotext file.pdf -f $( $i - 2 ) -l $( $i - 2 ) -raw output.txt
+pdftotext file.pdf -f 1 -l 100 -raw output.txt
 
 # Text post-processing.
 if ((Get-Content output.txt).Length -gt 0)
