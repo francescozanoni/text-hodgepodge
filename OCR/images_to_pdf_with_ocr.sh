@@ -11,6 +11,11 @@ convert "*.{jpg}" -quality 100 outfile.pdf
 # If so, file /etc/ImageMagick-6/policy.xml needs to be patched,
 # as suggested by https://stackoverflow.com/questions/52998331/imagemagick-security-policy-pdf-blocking-conversion#59193253
 
+# Another possible problem:
+# convert-im6.q16: cache resources exhausted `00000511.jpg' @ error/cache.c/OpenPixelCache/4095.
+# To be fixed again by patching file /etc/ImageMagick-6/policy.xml
+# https://stackoverflow.com/questions/31407010/cache-resources-exhausted-imagemagick#53699200
+
 # OCR the PDF just created.
 # @see https://ocrmypdf.readthedocs.io/en/latest/cookbook.html#basic-examples
 ocrmypdf -l ita outfile.pdf outfile_ocr.pdf
