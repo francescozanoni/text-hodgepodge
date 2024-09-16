@@ -27,3 +27,8 @@ ocrmypdf -l ita outfile.pdf outfile_ocr.pdf
 
 cd path/to/image/folder
 tesseract <( ls -1 *.jpg ) testo -l ita pdf
+
+# To avoid below warning:
+#  Warning: Invalid resolution 0 dpi. Using 70 instead.
+#  Estimating resolution as 219
+tesseract --dpi 300 <( ls -1 *.jpg ) testo -l ita pdf
